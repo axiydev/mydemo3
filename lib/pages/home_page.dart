@@ -8,7 +8,7 @@ class _HomePageState extends State<HomePage>{
   @override
   Widget build(BuildContext context)=>Scaffold(
     body:Center(
-      child:Text('Qalb Team Soft'),
+      child:Text('Qalb Team Tutorial'),
     ),
   );
 }
