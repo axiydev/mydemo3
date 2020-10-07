@@ -12,7 +12,13 @@ class _DetailPageState extends State<DetailPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body:Center(
-        child:Text(widget.input),
+        child:FlatButton(
+          onPressed: (){
+          Navigator.pop(context);
+          },
+          color: Colors.red,
+          child:Text(widget.input),
+        ),
       ),
     );
   }
