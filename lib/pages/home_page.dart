@@ -11,7 +11,7 @@ class _HomePageState extends State<HomePage>{
     body:Center(
       child:FlatButton(
         onPressed:(){
-          Navigator.pushNamed(context,DetailPage.id);
+          Navigator.pushReplacementNamed(context,DetailPage.id);
         },
         color: Colors.blue,
         child:Text('Detail Page'),
