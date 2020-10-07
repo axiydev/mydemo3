@@ -8,8 +8,10 @@ class DetailPage extends StatefulWidget {
 class _DetailPageState extends State<DetailPage> {
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child:Text("welcome to detail page"),
+    return Scaffold(
+      body:Center(
+        child:Text('welcome to detail page'),
+      ),
     );
   }
 }
