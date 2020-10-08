@@ -14,7 +14,7 @@ class _DetailPageState extends State<DetailPage> {
     body:Center(
       child:FlatButton(
         onPressed:(){
-        Navigator.pop(context);
+        Navigator.of(context).pop({'data':"PDP the best"});
         },
         color:Colors.red,
         child:Text(widget.input),

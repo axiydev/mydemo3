@@ -7,11 +7,16 @@ class HomePage extends StatefulWidget{
 }
 class _HomePageState extends State<HomePage>{
   Future _openDetail() async{
-    Navigator.of(context).push(new MaterialPageRoute(
+   Map result=await Navigator.of(context).push(new MaterialPageRoute(
       builder:(BuildContext){
      return new DetailPage(input:'Welcome to detail page');
       },
     ));
+   if(result!=null && result.containsKey('data')){
+     print(result['data']);
+   }else{
+     print("Nothing");
+   }
   }
   @override
   Widget build(BuildContext context)=>Scaffold(
