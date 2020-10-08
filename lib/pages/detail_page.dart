@@ -11,15 +11,15 @@ class _DetailPageState extends State<DetailPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body:Center(
-        child:FlatButton(
-          onPressed: (){
-          Navigator.pop(context);
-          },
-          color: Colors.red,
-          child:Text(widget.input),
-        ),
+    body:Center(
+      child:FlatButton(
+        onPressed:(){
+        Navigator.pop(context);
+        },
+        color:Colors.red,
+        child:Text(widget.input),
       ),
+    ),
     );
   }
 }

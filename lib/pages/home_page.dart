@@ -6,12 +6,11 @@ class HomePage extends StatefulWidget{
   _HomePageState createState()=>_HomePageState();
 }
 class _HomePageState extends State<HomePage>{
-
-  Future _openDetails() async{
+  Future _openDetail() async{
     Navigator.of(context).push(new MaterialPageRoute(
-      builder:(BuildContext context){
-      return new DetailPage(input:"Hello Qalb Team Soft");
-      }
+      builder:(BuildContext){
+     return new DetailPage(input:'Welcome to detail page');
+      },
     ));
   }
   @override
@@ -19,10 +18,9 @@ class _HomePageState extends State<HomePage>{
     body:Center(
       child:FlatButton(
         onPressed:(){
-          _openDetails();
-          //Navigator.pushReplacementNamed(context,DetailPage.id);
+          _openDetail();
         },
-        color: Colors.blue,
+        color:Colors.green,
         child:Text('Detail Page'),
       ),
     ),
