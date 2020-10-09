@@ -6,6 +6,7 @@ class HomePage extends StatefulWidget{
   _HomePageState createState()=>_HomePageState();
 }
 class _HomePageState extends State<HomePage>{
+  String data='Detail Page';
   Future _openDetail() async{
    Map result=await Navigator.of(context).push(new MaterialPageRoute(
       builder:(BuildContext){
@@ -13,7 +14,9 @@ class _HomePageState extends State<HomePage>{
       },
     ));
    if(result!=null && result.containsKey('data')){
-     print(result['data']);
+     setState((){
+       data=result['data'];
+     });
    }else{
      print("Nothing");
    }
@@ -26,7 +29,7 @@ class _HomePageState extends State<HomePage>{
           _openDetail();
         },
         color:Colors.green,
-        child:Text('Detail Page'),
+        child:Text(data),
       ),
     ),
   );
